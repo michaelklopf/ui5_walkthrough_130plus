@@ -1,13 +1,13 @@
 sap.ui.define([
   "sap/ui/core/UIComponent",
-  "sap/ui/model/json/JSONModel",
-  "sap/ui/model/resource/ResourceModel"
-], function (UIComponent, JSONModel, ResourceModel) {
+  "sap/ui/model/json/JSONModel"
+], function (UIComponent, JSONModel) {
   "use strict";
   return UIComponent.extend("mk.tutorial.Component", {
     metadata: {
-      rootView: "mk.tutorial.view.App"
+      manifest: "json"
     },
+
     init: function() {
       UIComponent.prototype.init.apply(this, arguments);
 
@@ -18,11 +18,6 @@ sap.ui.define([
       };
       var model = new JSONModel(data);
       this.setModel(model);
-
-      var i18nModel = new ResourceModel({
-        bundleName: "mk.tutorial.i18n.messagebundle"
-      });
-      this.setModel(i18nModel, "i18n");
     }
   });
 });
