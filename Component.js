@@ -19,6 +19,12 @@ sap.ui.define([
       };
       var model = new JSONModel(data);
       this.setModel(model);
+
+      var config = this.getMetadata().getConfig();
+      var namespace = this.getMetadata().getManifestEntry("sap.app").id;
+      var invoiceModel = new JSONModel(jQuery.sap.getModulePath(namespace, config.invoiceLocal));
+      this.setModel(invoiceModel, "invoice");
+
       this.welcomeDialog = new WelcomeDialog();
     }
   });

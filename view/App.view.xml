@@ -15,6 +15,7 @@
           </headerContent>
           <content>
             <mvc:XMLView viewName="mk.tutorial.view.WelcomePanel" />
+            <mvc:XMLView viewName="mk.tutorial.view.InvoiceList" />
           </content>
         </Page>
      </pages>
