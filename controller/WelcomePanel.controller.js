@@ -11,20 +11,8 @@ sap.ui.define([
       MessageToast.show(message + " " + recipient);
     },
 
-    _getDialog: function() {
-      if (!this.welcomeDialog) {
-        this.welcomeDialog = sap.ui.xmlfragment("mk.tutorial.view.WelcomeDialog", this);
-        this.getView().addDependent(this.welcomeDialog);
-      }
-      return this.welcomeDialog;
-    },
-
     onOpenDialog: function() {
-      this._getDialog().open();
-    },
-
-    onCloseDialog: function() {
-      this._getDialog().close();
+      this.getOwnerComponent().welcomeDialog.open(this.getView());
     }
   });
 });
