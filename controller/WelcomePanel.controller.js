@@ -13,7 +13,7 @@ sap.ui.define([
 
     _getDialog: function() {
       if (!this.welcomeDialog) {
-        this.welcomeDialog = sap.ui.xmlfragment("mk.tutorial.view.WelcomeDialog");
+        this.welcomeDialog = sap.ui.xmlfragment("mk.tutorial.view.WelcomeDialog", this);
         this.getView().addDependent(this.welcomeDialog);
       }
       return this.welcomeDialog;
@@ -21,6 +21,10 @@ sap.ui.define([
 
     onOpenDialog: function() {
       this._getDialog().open();
+    },
+
+    onCloseDialog: function() {
+      this._getDialog().close();
     }
   });
 });
