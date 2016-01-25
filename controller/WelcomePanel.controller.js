@@ -9,6 +9,18 @@ sap.ui.define([
       var recipient = this.getView().getModel().getProperty("/recipient/name");
       var message = bundle.getText("helloMsg");
       MessageToast.show(message + " " + recipient);
+    },
+
+    _getDialog: function() {
+      if (!this.welcomeDialog) {
+        this.welcomeDialog = sap.ui.xmlfragment("mk.tutorial.view.WelcomeDialog");
+        this.getView().addDependent(this.welcomeDialog);
+      }
+      return this.welcomeDialog;
+    },
+
+    onOpenDialog: function() {
+      this._getDialog().open();
     }
   });
 });
