@@ -8,3 +8,9 @@ Downloaded runtime 1.32.10 from
 http://openui5.org/download.html
 
 Notable changes are the usage of manifest.json for configuration.
+
+On Windows, Chrome throws cross origin error, on Mac with Safar no problems.  
+
+Open Chrome with flag in console:  
+cd C:\Program Files (x86)\Google\Chrome\Application\  
+.\chrome.exe --disable-web-security  
