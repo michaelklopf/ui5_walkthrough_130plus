@@ -26,6 +26,8 @@ sap.ui.define([
       this.setModel(invoiceModel, "invoice");
 
       this.welcomeDialog = new WelcomeDialog();
+
+      this.getRouter().initialize();
     }
   });
 });
