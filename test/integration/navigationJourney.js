@@ -5,7 +5,7 @@ sap.ui.require([
 	QUnit.module("Navigation");
 	opaTest("Should open the hello dialog", function (Given, When, Then) {
 		// Arrangements
-		Given.iStartMyAppInAFrame(jQuery.sap.getResourcePath("mk/tutorial/test", ".html"));
+		Given.iStartMyAppInAFrame(jQuery.sap.getResourcePath("mk/tutorial/app/test", ".html"));
 		//Actions
 		When.onTheAppPage.iPressTheSayHelloWithDialogButton();
 		// Assertions
