@@ -5,7 +5,7 @@ sap.ui.define([
   return {
     init: function() {
       var mockServer = new MockServer({
-        rootUri: "/destinations/northwind/V2/Northwind/Northwind.svc/"
+        rootUri: "http://secret/proxy/services.odata.org/V2/Northwind/Northwind.svc/"
       });
       var uriParameters = jQuery.sap.getUriParameters();
 

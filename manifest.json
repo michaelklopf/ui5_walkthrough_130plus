@@ -13,7 +13,7 @@
     "ach": "CA-UI5-DOC",
     "dataSources": {
       "invoiceRemote": {
-        "uri": "/destinations/northwind/V2/Northwind/Northwind.svc",
+        "uri": "http://secret/proxy/services.odata.org/V2/Northwind/Northwind.svc/",
         "type": "OData",
         "settings": {
           "odataVersion": "2.0"
@@ -42,17 +42,23 @@
         "sap.m": {}
       }
     },
-    "config": {
-      "invoiceLocal": "/Invoices.json",
-      "invoiceRemote": "http://services.odata.org/V2/Northwind/Northwind.svc/"
-    },
     "models": {
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
           "bundleName": "mk.tutorial.i18n.messagebundle"
         }
+      },
+      "invoice": {
+        "dataSource": "invoiceRemote"
       }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
     },
     "routing": {
       "config": {
@@ -82,16 +88,6 @@
           "viewName": "Detail"
         }
       }
-    },
-    "invoice": {
-      "dataSource": "invoiceRemote"
-    },
-    "resources": {
-      "css": [
-        {
-          "uri": "css/style.css"
-        }
-      ]
     }
   }
 }
